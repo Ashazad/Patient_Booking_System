@@ -1,16 +1,55 @@
-# React + Vite
+# Patient Booking System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This mockup is a simple patient appointment booking platform built with React and Vite. The app allows a patient to choose a physician, select an available appointment time, submit their contact details, reason for visit, and create a booking request. It also includes a basic physician/admin view where upcoming bookings can be seen and updated with statuses such as pending, confirmed, or cancelled.
 
-Currently, two official plugins are available:
+## How to Run the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Install dependencies:
+npm install
+2. Start the development server:
+npm run dev
+3. Open the local URL shown in the terminal, usually:
+http://localhost:5173/
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The app includes:
 
-## Expanding the ESLint configuration
+- Physician selection
+- Available appointment time selection
+- Patient details form
+- Reason-for-visit field
+- Booking creation
+- Admin booking list
+- Booking statuses
+- Double-booking prevention
+- localStorage persistence so bookings remain after refreshing the page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Technical/Product Decisions
+
+- I used React with Vite because it provides a lightweight and fast setup for building a frontend booking without unnecessary infrastructure.
+- I used Mock data instead of a backend database because the exercise focuses on product functionality, implementation, and tradeoffs rather than being product ready.
+- I stored bookings in localStorage so submitted appointments persist after refreshing the page.
+- New appointment requests are created with a default status of 'pending', since a physician or admin would typically review the request before confirming it.
+- I prevented double booking by disabling already booked appointment slots for active bookings. Cancelled bookings free up the appointment slot again.
+- I kept the app structure simple by separating the main app state in `App.jsx` from reusable UI components such as physician cards, appointment slot selection, the booking form, and the admin bookings view.
+
+## What I Would Improve With More Time
+
+- Improve the layout and navigation for a smoother user experience
+- Although I tried to make it mobile friendly, with more time  I  would improve mobile responsiveness and visual polish
+- Add a real backend and database so bookings could be stored securely and shared across users/devices.
+- Add authentication and separate accounts for patients, physicians, and admins.
+- Add stronger form validation
+- Add email or SMS notifications when an appointment is requested, confirmed, or cancelled.
+- Add calendar integration so confirmed appointments could sync with a physician's calendar.
+- Improve accessibility and keyboard navigation for the booking flow.
+- Add automated tests for booking creation, status updates, etc
+
+## Tech Stack 
+
+- React
+- Vite
+- JavaScript
+- CSS
+- Mock data
+- localStorage
