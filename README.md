@@ -21,13 +21,13 @@ The app includes:
 - Admin booking list
 - Booking statuses
 - Double-booking prevention
-- localStorage persistence so bookings remain after refreshing the page
+- local storage persistence so bookings remain after refreshing the page
 
 ## Key Technical/Product Decisions
 
 - I used React with Vite because it provides a lightweight and fast setup for building a frontend booking without unnecessary infrastructure.
 - I used Mock data instead of a backend database because the exercise focuses on product functionality, implementation, and tradeoffs rather than being product ready.
-- I stored bookings in localStorage so submitted appointments persist after refreshing the page.
+- I stored bookings in local storage so submitted appointments persist after refreshing the page.
 - New appointment requests are created with a default status of 'pending', since a physician or admin would typically review the request before confirming it.
 - I prevented double booking by disabling already booked appointment slots for active bookings. Cancelled bookings free up the appointment slot again.
 - I kept the app structure simple by separating the main app state in `App.jsx` from reusable UI components such as physician cards, appointment slot selection, the booking form, and the admin bookings view.
