@@ -1,3 +1,5 @@
+// Reusable card for displaying a physician’s name, specialty, and location.
+
 export default function PhysicianCard({ physician, isSelected, onSelect }) {
   return (
     <button

@@ -1,3 +1,6 @@
+// Patient booking page that manages physician selection, time selection, and form details.
+// Saves appointment requests to localStorage and prevents double-booking active time slots.
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PhysicianCard from "../components/PhysicianCard";

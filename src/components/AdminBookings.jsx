@@ -1,3 +1,7 @@
+
+// Admin view for displaying and managing submitted appointment bookings.
+// Allows booking statuses to be updated between pending, confirmed, and cancelled.
+
 export default function AdminBookings({ bookings, onUpdateStatus }) {
   if (bookings.length === 0) {
     return <p className="muted">No bookings yet. Submitted appointments will appear here.</p>;

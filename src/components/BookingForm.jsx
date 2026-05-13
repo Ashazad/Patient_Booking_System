@@ -1,3 +1,6 @@
+// Booking form for entering patient details and reason for visit.
+// Shows the selected physician/time and submits the appointment request.
+
 export default function BookingForm({
   formData,
   setFormData,

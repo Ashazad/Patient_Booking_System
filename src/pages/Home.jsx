@@ -1,3 +1,6 @@
+// Home page that shows the main booking system landing screen.
+// Lets users navigate to either the patient or physician view.
+
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import appointmentImg from "../assets/appointment.png";

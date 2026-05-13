@@ -1,3 +1,6 @@
+// Displays available appointment slots for the selected physician.
+// Disables slots that are already booked and lets the patient choose one.
+
 export default function AppointmentSlotPicker({
   selectedPhysician,
   selectedSlot,
