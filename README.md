@@ -20,7 +20,7 @@ The app includes:
 - Admin booking list
 - Booking statuses
 - Double-booking prevention
-- local storage persistence so bookings remain after refreshing the page
+- Local storage persistence so bookings remain after refreshing the page
 
 ## Key Technical/Product Decisions
 
