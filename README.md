@@ -4,9 +4,8 @@ This mockup is a simple patient appointment booking platform built with React an
 
 ## How to Run the Project
 
-1. Install dependencies:
-npm install react-router-dom
-2. Start the development server:
+1. Run the script:
+./run.sh
 npm run dev
 3. Open the local URL shown in the terminal, usually:
 http://localhost:5173/
